@@ -1,0 +1,113 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!doctype html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+
+    <main>
+
+
+
+        @await Component.InvokeAsync("_NavbarPartial")
+
+
+
+        <section class="hero-section" style="height: calc(110vh - 51px);" id="section_1">
+            <div class="section-overlay"></div>
+
+            <div class="container d-flex justify-content-center align-items-center">
+                <div class="row">
+
+                    <div class="col-12 mt-auto mb-5 text-center">
+                        <small>Merhaba ben,</small>
+
+                        <h2 class="text-white mb-5 text typewrite">Burak Filiz</h2>
+
+
+                    </div>
+
+                    <div class="col-lg-12 col-12">
+
+
+                        <div class="social-share">
+                            <ul class="social-icon d-flex align-items-center justify-content-center">
+
+                                <li class="social-icon-item">
+                                    <a href="https://github.com/devburakfiliz" class="social-icon-link">
+                                        <span class="bi-github"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.linkedin.com/in/devburakfiliz/" class="social-icon-link">
+                                        <span class="bi-linkedin"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://medium.com/burakfiliz" class="social-icon-link">
+                                        <span class="bi-medium"></span>
+                                    </a>
+                                </li>
+
+                                <li class="social-icon-item">
+                                    <a href="https://www.instagram.com/burakfilizzz/" class="social-icon-link">
+                                        <span class="bi-instagram"></span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-wrap">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                    <source src="~/ui/video/video1.mp4" type="video/mp4">
+
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+
+        @await Component.InvokeAsync("_AboutPartial")
+
+
+
+        @await Component.InvokeAsync("_ProjectPartial")
+
+
+        @await Component.InvokeAsync("_SkillPartial")
+
+
+
+
+
+        @await Component.InvokeAsync("_ContactPartial")
+
+
+
+    </main>
+
+
+    @await Component.InvokeAsync("_FooterPartial")
+
+
+
+
+    <!-- JAVASCRIPT FILES -->
+    @await Component.InvokeAsync("_ScriptPartial")
+
+
+</body>
+
+</html>

@@ -27,8 +27,6 @@
     <Folder Include="Dtos\SkillDto\" />
     <Folder Include="Dtos\ProjectDto\" />
     <Folder Include="Views\Contact\" />
-    <Folder Include="Views\Default\" />
-    <Folder Include="WievComponents\Default\" />
   </ItemGroup>
 
 </Project>
