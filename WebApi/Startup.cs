@@ -1,3 +1,8 @@
+using Business.Abstract;
+using Business.Concrete;
+using DataAccess.Abstract;
+using DataAccess.Concrete;
+using DataAccess.EntityFramework;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -25,6 +30,30 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Context>();
+
+            services.AddScoped<IAboutDal, EfAboutDal>();
+            services.AddScoped<IAboutService, AboutManager>();
+
+            services.AddScoped<ISkillDal, EfSkillDal>();
+            services.AddScoped<ISkillService, SkillManager>();
+
+            services.AddScoped<IProjectDal, EfProjectDal>();
+            services.AddScoped<IProjectService, ProjectManager>();
+
+            services.AddScoped<IContactDal, EfContactDal>();
+            services.AddScoped<IContactService, ContactManager>();
+
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("CVApiCors", opts =>
+                {
+                    opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

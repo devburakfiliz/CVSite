@@ -11,7 +11,7 @@ namespace Entities.Concrete
         public int ContactID { get; set; }
         public string FullName { get; set; }
         public string Email { get; set; }
-        public int Message { get; set; }
+        public string Message { get; set; }
         public DateTime Date { get; set; }
     }
 }
