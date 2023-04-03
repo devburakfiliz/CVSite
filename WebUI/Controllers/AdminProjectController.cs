@@ -7,18 +7,18 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using WebUI.Dtos.ProjectDto;
 
-namespace WebUI.WievComponents.Default
+namespace WebUI.Controllers
 {
-    public class _ProjectPartial : ViewComponent
+    public class AdminProjectController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public _ProjectPartial(IHttpClientFactory httpClientFactory)
+        public AdminProjectController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
 
-        public async Task<IViewComponentResult> InvokeAsync()
+        public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
             var responseMessage = await client.GetAsync("http://localhost:3509/api/Project");

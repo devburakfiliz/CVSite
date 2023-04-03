@@ -1,0 +1,31 @@
+﻿@model List<ResultProjectDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Proje Adı</th>
+        <th>Açıklama</th>
+        <th>Proje Resmi</th>
+
+        <th>Proje Güncelle</th>
+        <th>Proje Sil</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th> @item.ProjectID</th>
+            <td> @item.ProjectName</td>
+            <td> @item.Description</td>
+            <td> @item.ProjectImage</td>
+
+            <td> <a href="/AdminProject/UpdateProject/@item.ProjectID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+            <td> <a href="/AdminProject/DeleteProject/@item.ProjectID" class="btn mb-1 btn-rounded btn-outline-success">Sil</a></td>
+        </tr>
+
+    }
+</table>
