@@ -1,0 +1,20 @@
+﻿@model UpdateProjectDto
+@{
+    ViewData["Title"] = "UpdateProject";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+
+<form method="post">
+    <input type="hidden" asp-for="ProjectID" />
+    <label>Proje Adı</label>
+    <input type="text" asp-for="ProjectName" class="form-control" />
+    <label>Proje Detay</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <label>Proje Resmi</label>
+    <input type="text" asp-for="ProjectImage" class="form-control" />
+
+    <br />
+    <button class="btn btn-outline-success">Projemi Güncelle</button>
+</form>

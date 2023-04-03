@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebUI.Dtos.SkillDto
 {
-    public class CreateSkillDeto
+    public class CreateSkillDto
     {
         public string SkillName { get; set; }
         public string SkillImage { get; set; }

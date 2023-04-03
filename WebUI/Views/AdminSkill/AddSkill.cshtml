@@ -1,0 +1,18 @@
+﻿@model CreateSkillDto
+@{
+    ViewData["Title"] = "AddSkill";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+<form method="post">
+    <label>Yetenek Adı</label>
+    <input type="text" asp-for="SkillName" class="form-control" />
+    <br />
+    <label> Yetenek Resmi</label>
+    <input type="text" asp-for="SkillImage" class="form-control" />
+    <br />
+    
+    <button class="btn btn-primary">Yetenek ekle</button>
+</form>
+

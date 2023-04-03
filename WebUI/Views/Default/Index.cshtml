@@ -52,7 +52,7 @@
                                 </li>
 
                                 <li class="social-icon-item">
-                                    <a href="https://medium.com/burakfiliz" class="social-icon-link">
+                                    <a href="https://devburakfiliz.medium.com" class="social-icon-link">
                                         <span class="bi-medium"></span>
                                     </a>
                                 </li>
@@ -92,7 +92,7 @@
 
 
 
-        @await Component.InvokeAsync("_ContactPartial")
+        @await Html.PartialAsync("/Views/Contact/SendMessage.cshtml")
 
 
 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebUI.Dtos.AboutDto;
+using WebUI.Dtos.ContactDto;
 using WebUI.Dtos.ProjectDto;
 
 namespace WebUI.Mapping
@@ -19,6 +20,10 @@ namespace WebUI.Mapping
             CreateMap<UpdateProjectDto, Project>().ReverseMap();
             CreateMap<CreateProjectDto, Project>().ReverseMap();
             CreateMap<ResultProjectDto, Project>().ReverseMap();
+
+
+            CreateMap<CreateContactDto, Contact>().ReverseMap();
+            CreateMap<ResultContactDto, Contact>().ReverseMap();
 
         }
 

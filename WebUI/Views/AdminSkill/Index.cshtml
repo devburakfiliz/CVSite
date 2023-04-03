@@ -1,0 +1,28 @@
+﻿@model List<ResultSkillDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Yetenek Adı</th>
+        <th>Yetenek Resmi</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th> @item.SkillID</th>
+            <td> @item.SkillName</td>
+            <td> @item.SkillImage</td>
+
+            <td> <a href="/AdminSkill/UpdateSkill/@item.SkillID" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+            <td> <a href="/AdminSkill/DeleteSkill/@item.SkillID" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
+        </tr>
+
+    }
+</table>
+<a href="/AdminSkill/AddSkill/" class="btn mb-1 btn-rounded btn-outline-info">Yeni Yetenek Girişi</a>

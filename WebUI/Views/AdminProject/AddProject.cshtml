@@ -1,0 +1,21 @@
+﻿@model CreateProjectDto
+@{
+    ViewData["Title"] = "AddProject";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+<form method="post">
+    <label>Proje Adı</label>
+    <input type="text" asp-for="ProjectName" class="form-control" />
+    <br />
+    <label> Proje Açıklması</label>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+    <label> Proje Resmi</label>
+    <input type="text" asp-for="ProjectImage" class="form-control" />
+    <br />
+
+    <button class="btn btn-primary">Projeyi ekle</button>
+</form>
+
