@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\SkillDto\" />
     <Folder Include="Views\Contact\" />
   </ItemGroup>
 
