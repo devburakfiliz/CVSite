@@ -14,7 +14,7 @@ namespace DataAccess.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=BURAK;initial catalog=CVDb; integrated security=true");
+            optionsBuilder.UseSqlServer(@"Server=104.247.162.242\MSSQLSERVER2019; initial catalog=mertozge_CVDb; user =mertozge_admindb; password= &g!8p4GZ2oqTqpiv;");
         }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Contact> Contacts { get; set; }
